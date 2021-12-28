@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('/font/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('/font/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('/font/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Nunito-VariableFont_wght';
+    src: url('/font/Nunito-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Regular';
+    src: url('/font/WorkSans-Regular.ttf');
+}
+
+body {
+    font-family: WorkSans-Regular;
+}
+
+div.kotak:hover img {
+    transition: all 0.5s ease-in;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+div.kotak img {
+    transition: all 0.5s ease-in;
+    transform: scale(1);
+}
+
+.img-hover-zoom--blur {
+    overflow: hidden;
+    position: relative;
+}
+
+
+div.kotak:hover a {
+    transition: all 0.5s ease-in;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+div.kotak a {
+    transition: all 0.5s ease-in;
+    transform: scale(1);
+}
+
+.img-hover-zoom--blur {
+    overflow: hidden;
+    position: relative;
+}
+
+.category {
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    border-bottom-right-radius: 20% 100%;
+}
+
+.bg{
+     background: linear-gradient(to right, #000046, #1cb5e0); 
+}
