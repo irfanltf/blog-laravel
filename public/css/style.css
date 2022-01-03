@@ -66,6 +66,47 @@ div.kotak a {
     border-bottom-right-radius: 20% 100%;
 }
 
-.bg{
-     background: linear-gradient(to right, #000046, #1cb5e0); 
+.bg {
+    background: linear-gradient(to right, #000046, #1cb5e0);
+}
+
+.login {
+    background-color: rgb(6, 66, 134);
+    border-radius: 1px;
+    transition: all 0.5s ease-in;
+
+}
+
+.login:hover {
+    background-color: rgb(11, 99, 199);
+
+    border-radius: 15px;
+    transition: all 0.5s ease-in;
+}
+
+
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-registration input {
+    border-radius: 0;
+    margin-bottom: -1px;
 }

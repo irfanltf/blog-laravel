@@ -9,9 +9,10 @@ class PostController extends Controller
 {
     public function index()
     {
+
         return view('post', [
             'title' => 'All Posts',
-            'posts' => Post::latest()->get(),
+            'posts' => Post::latest()->cari(request(['cari', 'category', 'author']))->paginate(7)->withQueryString(),
             'active' => 'blog'
         ]);
     }

@@ -5,12 +5,12 @@
     <div class="row justify-content-center mb-5">
         <div class="col-md-8">
             <h2>{{$post->judul}}</h2>
-            <p>By. <a href="/author/{{$post->author->username}}" class="text-decoration-none">{{ $post->author->name }}</a> in <a href="/categories/{{$post->category->slug}}">{{ $post->category->nama }}</a></p>
-<div class="kotak">
-        <div class="img-hover-zoom--blur">
-            <img src="https://source.unsplash.com/1200x400?{{ $post->category->nama}}" class="card-img-top img-fluid" alt="...">
- </div>
-        </div>
+            <p>By. <a href="/author/{{$post->author->username}}" class="text-decoration-none">{{ $post->author->name }}</a> in <a href="/blog?category={{$post->category->slug}}">{{ $post->category->nama }}</a></p>
+            <div class="kotak">
+                <div class="img-hover-zoom--blur">
+                    <img src="https://source.unsplash.com/1200x400?{{ $post->category->nama}}" class="card-img-top img-fluid" alt="...">
+                </div>
+            </div>
             <article class="my-3 fs-4">
 
                 {!! $post->body !!}

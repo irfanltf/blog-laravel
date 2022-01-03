@@ -1,9 +1,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg">
         <div class="container">
             <a class="navbar-brand" href="#">
-      <img src="https://scontent-sin6-4.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/126252051_668312007165615_5122360054364807846_n.jpg?_nc_ht=scontent-sin6-4.cdninstagram.com&_nc_cat=103&_nc_ohc=mLX19NNZzskAX9lQt7J&edm=AABBvjUBAAAA&ccb=7-4&oh=00_AT9TMRJqNksw6-sHNmoh08XtGN_grduVoyoRJKS4hvfQ7Q&oe=61D12268&_nc_sid=83d603" alt="" width="30" height="24" class="d-inline-block align-text-top">
-      Blog Irfan
-    </a>
+                <img src="/img/logo-teras.png" alt="" width="35" height="29" class="d-inline-block align-text-top">
+                Blog Irfan
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,6 +23,40 @@
                     </li>
 
                 </ul>
+                <ul class="navbar-nav ms-auto">
+                    @auth
+
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Selamat Datang, {{ auth()->user()->name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-kanban"></i> My Dashboard</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <form action="/logout" method="POST">
+                                    @csrf
+                                    <button class="dropdown-item"><i class="bi bi-arrow-left-square-fill"></i> Logout</button>
+                                </form>
+
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    @else
+
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link text-light"> <i class="bi bi-arrow-right-square-fill"></i> Login</a>
+
+                    </li>
+                    @endauth
+                </ul>
+
             </div>
         </div>
     </nav>
